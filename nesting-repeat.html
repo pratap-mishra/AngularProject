@@ -1,0 +1,24 @@
+<html ng-app="myModule" >
+    <head><script src="Script\angular.min.js"></script>
+    <script src="Script\nesting-repeat.js"></script>
+    </head>
+
+    <body ng-controller="myController" >
+
+<div ng-controller="myController">
+
+    <ul>
+        <li ng-repeat="country in country">
+            {{country.name}}
+            <ul>
+                <li ng-repeat="city in country.city">
+                    {{city.name}}
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+
+    </body>
+</html>
