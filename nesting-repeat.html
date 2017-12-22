@@ -5,14 +5,14 @@
 
     <body ng-controller="myController" >
 
-<div ng-controller="myController">
+<div ng-controller="myController" >
 
     <ul>
-        <li ng-repeat="country in country">
-            {{country.name}}
+        <li ng-repeat="country in country" ng-init="parentIndex=$index">
+           <b>Country Name: {{country.name}}</b> , index={{parentIndex}}
             <ul>
                 <li ng-repeat="city in country.city">
-                    {{city.name}}
+                  <b>  City Name:{{city.name}}</b> , Parent Index={{parentIndex}},index={{$index}}
                 </li>
             </ul>
         </li>
